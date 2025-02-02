@@ -18,7 +18,6 @@ def compute_lower_bound(start_times, remaining_jobs):
     """
     現在の部分スケジュールの完了時刻 start_times から、
     残りのジョブ列 remaining_jobs の順序全列挙により、最良延長（最小の最終時刻）を下界として返す。
-    ※ジョブ数が多い場合は、別の近似下界を検討する必要があります。
     """
     if not remaining_jobs:
         return start_times[2]
@@ -31,12 +30,12 @@ def compute_lower_bound(start_times, remaining_jobs):
 
 def branch_and_bound(jobs, partial_sequence, remaining_indices, current_times, best_solution):
     """
-    分枝限定法による探索（再帰的に部分解を延長）
+    分枝限定法による探索
       - jobs: Job オブジェクトのリスト
       - partial_sequence: 現在確定しているジョブのインデックス列
       - remaining_indices: 未確定のジョブのインデックス（リスト）
       - current_times: 現在の各機械の完了時刻 (tA, tB, tC)
-      - best_solution: {"sequence": best_sequence, "makespan": best_makespan}（グローバル最良解）
+      - best_solution: {"sequence": best_sequence, "makespan": best_makespan}
     """
     if not remaining_indices:
         # 完全なスケジュールが得られた場合
