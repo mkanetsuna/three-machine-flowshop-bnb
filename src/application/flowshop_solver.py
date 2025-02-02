@@ -1,5 +1,4 @@
 from itertools import permutations
-# Q. itertoolは
 from math import inf
 
 def simulate_schedule(jobs, start_times=(0, 0, 0)):
