@@ -1,0 +1,10 @@
+{
+    "jobs": ["job1", "job2", "job3", "job4", "job5"],
+    "processing_times": {
+        "MachineA": [7, 10, 4, 2, 2],
+        "MachineB": [15, 8, 5, 17, 10],
+        "MachineC": [6, 2, 5, 7, 4]
+    },
+    "due_dates": [30, 35, 35, 40, 50]
+  }
+  

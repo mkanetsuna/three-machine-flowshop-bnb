@@ -1,0 +1,19 @@
+{
+    "name": "Three Machine Flowshop BnB",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": ".."
+    },
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.shell.linux": "/bin/bash"
+        },
+        "extensions": [
+          "ms-python.python"
+        ]
+      }
+    },
+    "postCreateCommand": "pip install -r requirements.txt"
+  }
+  
